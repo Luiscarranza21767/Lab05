@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Mon Oct 17 21:08:35 2022
+                                                                                               Mon Oct 17 21:16:56 2022
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	16F887
@@ -460,7 +460,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    446 ;;
    447 ;; *************** function _main *****************
    448 ;; Defined at:
-   449 ;;		line 52 in file "main.c"
+   449 ;;		line 53 in file "main.c"
    450 ;; Parameters:    Size  Location     Type
    451 ;;		None
    452 ;; Auto vars:     Size  Location     Type
@@ -502,25 +502,25 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    488                           ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
    489                           
    490                           
-   491                           ;main.c: 53:     setup();
+   491                           ;main.c: 54:     setup();
    492     00E6  120A  118A  2004  120A  118A  	fcall	_setup
    493                           
-   494                           ;main.c: 54:     setupINTOSC();
+   494                           ;main.c: 55:     setupINTOSC();
    495     00EB  120A  158A  27F8  120A  118A  	fcall	_setupINTOSC
    496                           
-   497                           ;main.c: 55:     setup_ADC();
+   497                           ;main.c: 56:     setup_ADC();
    498     00F0  120A  118A  2028  120A  118A  	fcall	_setup_ADC
    499                           
-   500                           ;main.c: 56:     setup_PWM();
+   500                           ;main.c: 57:     setup_PWM();
    501     00F5  120A  118A  2013  120A  118A  	fcall	_setup_PWM
    502     00FA                     l1608:
    503                           
-   504                           ;main.c: 59:         ADCON0bits.GO = 1;
+   504                           ;main.c: 61:         ADCON0bits.GO = 1;
    505     00FA  1283               	bcf	3,5	;RP0=0, select bank0
    506     00FB  1303               	bcf	3,6	;RP1=0, select bank0
    507     00FC  149F               	bsf	31,1	;volatile
    508     00FD                     l72:	
-   509                           ;main.c: 60:         while (ADCON0bits.GO == 1);
+   509                           ;main.c: 62:         while (ADCON0bits.GO == 1);
    510                           
    511     00FD  189F               	btfsc	31,1	;volatile
    512     00FE  2900               	goto	u2251
@@ -530,11 +530,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    516     0101                     u2250:
    517     0101                     l74:
    518                           
-   519                           ;main.c: 61:         ADIF = 0;
+   519                           ;main.c: 63:         ADIF = 0;
    520     0101  130C               	bcf	12,6	;volatile
    521     0102                     l1610:
    522                           
-   523                           ;main.c: 63:         valADC = ((ADRESH << 2) + (ADRESL >> 6));
+   523                           ;main.c: 66:         valADC = ((ADRESH << 2) + (ADRESL >> 6));
    524     0102  1683               	bsf	3,5	;RP0=1, select bank1
    525     0103  1303               	bcf	3,6	;RP1=0, select bank1
    526     0104  081E               	movf	30,w	;volatile
@@ -571,7 +571,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    557     0122  00E4               	movwf	_valADC+1
    558     0123                     l1612:
    559                           
-   560                           ;main.c: 65:         vPWM = (0.03128*valADC + 31);
+   560                           ;main.c: 69:         vPWM = (0.03128*valADC + 31);
    561     0123  0863               	movf	_valADC,w
    562     0124  00F0               	movwf	___xxtofl@val
    563     0125  0864               	movf	_valADC+1,w
@@ -637,7 +637,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    623     0171  00E1               	movwf	_vPWM
    624     0172                     l1614:
    625                           
-   626                           ;main.c: 66:         vPWMl = vPWM & 0x003;
+   626                           ;main.c: 72:         vPWMl = vPWM & 0x003;
    627     0172  3003               	movlw	3
    628     0173  0561               	andwf	_vPWM,w
    629     0174  00DF               	movwf	_vPWMl
@@ -646,7 +646,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    632     0177  00E0               	movwf	_vPWMl+1
    633     0178                     l1616:
    634                           
-   635                           ;main.c: 68:         vPWMh = (vPWM & 0x3FC) >> 2;
+   635                           ;main.c: 75:         vPWMh = (vPWM & 0x3FC) >> 2;
    636     0178  0862               	movf	_vPWM+1,w
    637     0179  00D9               	movwf	??_main+1
    638     017A  0861               	movf	_vPWM,w
@@ -665,7 +665,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    651     0187  00DE               	movwf	_vPWMh+1
    652     0188                     l1618:
    653                           
-   654                           ;main.c: 70:         CCP1CONbits.DC1B = vPWMl;
+   654                           ;main.c: 78:         CCP1CONbits.DC1B = vPWMl;
    655     0188  085F               	movf	_vPWMl,w
    656     0189  00D8               	movwf	??_main
    657     018A  0ED8               	swapf	??_main,f
@@ -676,12 +676,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    662     018F  0097               	movwf	23	;volatile
    663     0190                     l1620:
    664                           
-   665                           ;main.c: 71:         CCPR1L = vPWMh;
+   665                           ;main.c: 80:         CCPR1L = vPWMh;
    666     0190  085D               	movf	_vPWMh,w
    667     0191  0095               	movwf	21	;volatile
    668     0192                     l1622:
    669                           
-   670                           ;main.c: 73:         _delay((unsigned long)((1)*(500000/4000.0)));
+   670                           ;main.c: 82:         _delay((unsigned long)((1)*(500000/4000.0)));
    671     0192  3028               	movlw	40
    672     0193  1283               	bcf	3,5	;RP0=0, select bank0
    673     0194  1303               	bcf	3,6	;RP1=0, select bank0
@@ -698,7 +698,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    684     0013                     __ptext1:	
    685 ;; *************** function _setup_PWM *****************
    686 ;; Defined at:
-   687 ;;		line 118 in file "main.c"
+   687 ;;		line 132 in file "main.c"
    688 ;; Parameters:    Size  Location     Type
    689 ;;		None
    690 ;; Auto vars:     Size  Location     Type
@@ -733,36 +733,36 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    719                           ; Regs used in _setup_PWM: [wreg+status,2+status,0]
    720                           
    721                           
-   722                           ;main.c: 119:     TRISCbits.TRISC2 = 1;
+   722                           ;main.c: 133:     TRISCbits.TRISC2 = 1;
    723     0013  1683               	bsf	3,5	;RP0=1, select bank1
    724     0014  1303               	bcf	3,6	;RP1=0, select bank1
    725     0015  1507               	bsf	7,2	;volatile
    726     0016                     l1184:
    727                           
-   728                           ;main.c: 121:     PR2 = 155;
+   728                           ;main.c: 135:     PR2 = 155;
    729     0016  309B               	movlw	155
    730     0017  0092               	movwf	18	;volatile
    731                           
-   732                           ;main.c: 123:     CCP1CON = 0b00001100;
+   732                           ;main.c: 137:     CCP1CON = 0b00001100;
    733     0018  300C               	movlw	12
    734     0019  1283               	bcf	3,5	;RP0=0, select bank0
    735     001A  1303               	bcf	3,6	;RP1=0, select bank0
    736     001B  0097               	movwf	23	;volatile
    737     001C                     l1186:
    738                           
-   739                           ;main.c: 124:     TMR2IF = 0;
+   739                           ;main.c: 138:     TMR2IF = 0;
    740     001C  108C               	bcf	12,1	;volatile
    741     001D                     l1188:
    742                           
-   743                           ;main.c: 125:     T2CONbits.T2CKPS = 0b11;
+   743                           ;main.c: 140:     T2CONbits.T2CKPS = 0b11;
    744     001D  3003               	movlw	3
    745     001E  0492               	iorwf	18,f	;volatile
    746     001F                     l1190:
    747                           
-   748                           ;main.c: 126:     TMR2ON = 1;
+   748                           ;main.c: 141:     TMR2ON = 1;
    749     001F  1512               	bsf	18,2	;volatile
    750     0020                     l89:	
-   751                           ;main.c: 128:     while(!TMR2IF);
+   751                           ;main.c: 143:     while(!TMR2IF);
    752                           
    753     0020  1C8C               	btfss	12,1	;volatile
    754     0021  2823               	goto	u1171
@@ -772,7 +772,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    758     0024                     u1170:
    759     0024                     l91:
    760                           
-   761                           ;main.c: 129:     TRISCbits.TRISC2 = 0;
+   761                           ;main.c: 144:     TRISCbits.TRISC2 = 0;
    762     0024  1683               	bsf	3,5	;RP0=1, select bank1
    763     0025  1303               	bcf	3,6	;RP1=0, select bank1
    764     0026  1107               	bcf	7,2	;volatile
@@ -784,7 +784,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    770     0028                     __ptext2:	
    771 ;; *************** function _setup_ADC *****************
    772 ;; Defined at:
-   773 ;;		line 97 in file "main.c"
+   773 ;;		line 108 in file "main.c"
    774 ;; Parameters:    Size  Location     Type
    775 ;;		None
    776 ;; Auto vars:     Size  Location     Type
@@ -819,59 +819,59 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    805                           ; Regs used in _setup_ADC: [wreg]
    806                           
    807                           
-   808                           ;main.c: 98:     PORTAbits.RA0 = 0;
+   808                           ;main.c: 109:     PORTAbits.RA0 = 0;
    809     0028  1283               	bcf	3,5	;RP0=0, select bank0
    810     0029  1303               	bcf	3,6	;RP1=0, select bank0
    811     002A  1005               	bcf	5,0	;volatile
    812                           
-   813                           ;main.c: 99:     TRISAbits.TRISA0 = 1;
+   813                           ;main.c: 110:     TRISAbits.TRISA0 = 1;
    814     002B  1683               	bsf	3,5	;RP0=1, select bank1
    815     002C  1303               	bcf	3,6	;RP1=0, select bank1
    816     002D  1405               	bsf	5,0	;volatile
    817                           
-   818                           ;main.c: 100:     ANSELbits.ANS0 = 1;
+   818                           ;main.c: 111:     ANSELbits.ANS0 = 1;
    819     002E  1683               	bsf	3,5	;RP0=1, select bank3
    820     002F  1703               	bsf	3,6	;RP1=1, select bank3
    821     0030  1408               	bsf	8,0	;volatile
    822                           
-   823                           ;main.c: 102:     ADCON0bits.ADCS1 = 0;
+   823                           ;main.c: 113:     ADCON0bits.ADCS1 = 0;
    824     0031  1283               	bcf	3,5	;RP0=0, select bank0
    825     0032  1303               	bcf	3,6	;RP1=0, select bank0
    826     0033  139F               	bcf	31,7	;volatile
    827                           
-   828                           ;main.c: 103:     ADCON0bits.ADCS0 = 1;
+   828                           ;main.c: 114:     ADCON0bits.ADCS0 = 1;
    829     0034  171F               	bsf	31,6	;volatile
    830                           
-   831                           ;main.c: 105:     ADCON1bits.VCFG1 = 0;
+   831                           ;main.c: 116:     ADCON1bits.VCFG1 = 0;
    832     0035  1683               	bsf	3,5	;RP0=1, select bank1
    833     0036  1303               	bcf	3,6	;RP1=0, select bank1
    834     0037  129F               	bcf	31,5	;volatile
    835                           
-   836                           ;main.c: 106:     ADCON1bits.VCFG0 = 0;
+   836                           ;main.c: 117:     ADCON1bits.VCFG0 = 0;
    837     0038  121F               	bcf	31,4	;volatile
    838                           
-   839                           ;main.c: 108:     ADCON1bits.ADFM = 0;
+   839                           ;main.c: 119:     ADCON1bits.ADFM = 0;
    840     0039  139F               	bcf	31,7	;volatile
    841                           
-   842                           ;main.c: 110:     ADCON0bits.CHS3 = 0;
+   842                           ;main.c: 121:     ADCON0bits.CHS3 = 0;
    843     003A  1283               	bcf	3,5	;RP0=0, select bank0
    844     003B  1303               	bcf	3,6	;RP1=0, select bank0
    845     003C  129F               	bcf	31,5	;volatile
    846                           
-   847                           ;main.c: 111:     ADCON0bits.CHS2 = 0;
+   847                           ;main.c: 122:     ADCON0bits.CHS2 = 0;
    848     003D  121F               	bcf	31,4	;volatile
    849                           
-   850                           ;main.c: 112:     ADCON0bits.CHS1 = 0;
+   850                           ;main.c: 123:     ADCON0bits.CHS1 = 0;
    851     003E  119F               	bcf	31,3	;volatile
    852                           
-   853                           ;main.c: 113:     ADCON0bits.CHS0 = 0;
+   853                           ;main.c: 124:     ADCON0bits.CHS0 = 0;
    854     003F  111F               	bcf	31,2	;volatile
    855                           
-   856                           ;main.c: 115:     ADCON0bits.ADON = 1;
+   856                           ;main.c: 126:     ADCON0bits.ADON = 1;
    857     0040  141F               	bsf	31,0	;volatile
    858     0041                     l1180:
    859                           
-   860                           ;main.c: 116:     _delay((unsigned long)((100)*(500000/4000000.0)));
+   860                           ;main.c: 127:     _delay((unsigned long)((100)*(500000/4000000.0)));
    861     0041  3003               	movlw	3
    862     0042  00F0               	movwf	??_setup_ADC
    863     0043                     u2287:
@@ -886,7 +886,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    872     0FF8                     __ptext3:	
    873 ;; *************** function _setupINTOSC *****************
    874 ;; Defined at:
-   875 ;;		line 90 in file "main.c"
+   875 ;;		line 101 in file "main.c"
    876 ;; Parameters:    Size  Location     Type
    877 ;;		None
    878 ;; Auto vars:     Size  Location     Type
@@ -921,7 +921,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    907                           ; Regs used in _setupINTOSC: [wreg+status,2+status,0]
    908                           
    909                           
-   910                           ;main.c: 91:     OSCCONbits.IRCF = 0b011;
+   910                           ;main.c: 102:     OSCCONbits.IRCF = 0b011;
    911     0FF8  1683               	bsf	3,5	;RP0=1, select bank1
    912     0FF9  1303               	bcf	3,6	;RP1=0, select bank1
    913     0FFA  080F               	movf	15,w	;volatile
@@ -930,7 +930,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    916     0FFD  008F               	movwf	15	;volatile
    917     0FFE                     l1176:
    918                           
-   919                           ;main.c: 92:     OSCCONbits.SCS = 1;
+   919                           ;main.c: 103:     OSCCONbits.SCS = 1;
    920     0FFE  140F               	bsf	15,0	;volatile
    921     0FFF                     l83:
    922     0FFF  0008               	return
@@ -940,7 +940,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    926     0004                     __ptext4:	
    927 ;; *************** function _setup *****************
    928 ;; Defined at:
-   929 ;;		line 80 in file "main.c"
+   929 ;;		line 89 in file "main.c"
    930 ;; Parameters:    Size  Location     Type
    931 ;;		None
    932 ;; Auto vars:     Size  Location     Type
@@ -975,34 +975,34 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    961                           ; Regs used in _setup: [wreg+status,2]
    962                           
    963                           
-   964                           ;main.c: 81:     ANSELH = 0;
+   964                           ;main.c: 90:     ANSELH = 0;
    965     0004  1683               	bsf	3,5	;RP0=1, select bank3
    966     0005  1703               	bsf	3,6	;RP1=1, select bank3
    967     0006  0189               	clrf	9	;volatile
    968                           
-   969                           ;main.c: 82:     TRISB = 0;
+   969                           ;main.c: 91:     TRISB = 0;
    970     0007  1683               	bsf	3,5	;RP0=1, select bank1
    971     0008  1303               	bcf	3,6	;RP1=0, select bank1
    972     0009  0186               	clrf	6	;volatile
    973                           
-   974                           ;main.c: 83:     TRISC = 0;
+   974                           ;main.c: 92:     TRISC = 0;
    975     000A  0187               	clrf	7	;volatile
    976                           
-   977                           ;main.c: 84:     TRISD = 0;
+   977                           ;main.c: 93:     TRISD = 0;
    978     000B  0188               	clrf	8	;volatile
    979                           
-   980                           ;main.c: 85:     PORTC = 0;
+   980                           ;main.c: 94:     PORTC = 0;
    981     000C  1283               	bcf	3,5	;RP0=0, select bank0
    982     000D  1303               	bcf	3,6	;RP1=0, select bank0
    983     000E  0187               	clrf	7	;volatile
    984     000F                     l1170:
    985                           
-   986                           ;main.c: 86:     PORTB = 1;
+   986                           ;main.c: 95:     PORTB = 1;
    987     000F  3001               	movlw	1
    988     0010  0086               	movwf	6	;volatile
    989     0011                     l1172:
    990                           
-   991                           ;main.c: 87:     PORTD = 0;
+   991                           ;main.c: 96:     PORTD = 0;
    992     0011  0188               	clrf	8	;volatile
    993     0012                     l80:
    994     0012  0008               	return
@@ -3620,7 +3620,7 @@ DATA                 0      0      53      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Mon Oct 17 21:08:35 2022
+Symbol Table                                                                                   Mon Oct 17 21:16:56 2022
 
                      l80 0012                       l72 00FD                       l74 0101  
                      l83 0FFF                       l91 0024                       l92 0027  

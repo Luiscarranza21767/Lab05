@@ -28,7 +28,7 @@ cstackCOMMON COMMON 1 70 70 E 1 1
 cstackBANK0 BANK0 1 20 20 3D 1 1
 bssBANK0 BANK0 1 5D 5D 8 1 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
+$C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
 idloc IDLOC 5 2000 2000 4 2 1
 end_init CODE 0 0 0 3 2 1
 config CONFIG 4 2007 2007 2 2 1
@@ -80,21 +80,21 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab05.production.o
-7F2 cinit CODE >485:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F2 cinit CODE >488:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F2 cinit CODE >508:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F3 cinit CODE >509:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F4 cinit CODE >510:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F5 cinit CODE >511:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F6 cinit CODE >512:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F7 cinit CODE >513:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F8 cinit CODE >514:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7F9 cinit CODE >515:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7FA cinit CODE >516:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7FB cinit CODE >517:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7FC cinit CODE >523:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7FC cinit CODE >525:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
-7FD cinit CODE >526:C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.s
+7F2 cinit CODE >485:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F2 cinit CODE >488:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F2 cinit CODE >508:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F3 cinit CODE >509:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F4 cinit CODE >510:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F5 cinit CODE >511:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F6 cinit CODE >512:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F7 cinit CODE >513:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F8 cinit CODE >514:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7F9 cinit CODE >515:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7FA cinit CODE >516:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7FB cinit CODE >517:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7FC cinit CODE >523:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7FC cinit CODE >525:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
+7FD cinit CODE >526:C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.s
 255 text9 CODE >10:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcadd.c
 255 text9 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcadd.c
 25A text9 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcadd.c
@@ -549,67 +549,67 @@ E5 text6 CODE >70:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\fl
 24B text5 CODE >42:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\xxtofl.c
 24C text5 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\xxtofl.c
 254 text5 CODE >44:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\xxtofl.c
-4 text4 CODE >80:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-4 text4 CODE >81:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-7 text4 CODE >82:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-A text4 CODE >83:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-B text4 CODE >84:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-C text4 CODE >85:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-F text4 CODE >86:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-11 text4 CODE >87:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-12 text4 CODE >88:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-FF8 text3 CODE >90:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-FF8 text3 CODE >91:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-FFE text3 CODE >92:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-FFF text3 CODE >93:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-28 text2 CODE >97:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-28 text2 CODE >98:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-2B text2 CODE >99:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-2E text2 CODE >100:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-31 text2 CODE >102:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-34 text2 CODE >103:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-35 text2 CODE >105:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-38 text2 CODE >106:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-39 text2 CODE >108:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-3A text2 CODE >110:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-3D text2 CODE >111:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-3E text2 CODE >112:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-3F text2 CODE >113:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-40 text2 CODE >115:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-41 text2 CODE >116:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-46 text2 CODE >117:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-13 text1 CODE >118:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-13 text1 CODE >119:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-16 text1 CODE >121:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-18 text1 CODE >123:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-1C text1 CODE >124:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-1D text1 CODE >125:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-1F text1 CODE >126:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-20 text1 CODE >128:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-24 text1 CODE >129:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-27 text1 CODE >131:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-E6 maintext CODE >52:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+4 text4 CODE >89:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+4 text4 CODE >90:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+7 text4 CODE >91:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+A text4 CODE >92:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+B text4 CODE >93:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+C text4 CODE >94:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+F text4 CODE >95:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+11 text4 CODE >96:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+12 text4 CODE >97:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+FF8 text3 CODE >101:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+FF8 text3 CODE >102:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+FFE text3 CODE >103:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+FFF text3 CODE >104:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+28 text2 CODE >108:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+28 text2 CODE >109:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+2B text2 CODE >110:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+2E text2 CODE >111:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+31 text2 CODE >113:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+34 text2 CODE >114:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+35 text2 CODE >116:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+38 text2 CODE >117:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+39 text2 CODE >119:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+3A text2 CODE >121:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+3D text2 CODE >122:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+3E text2 CODE >123:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+3F text2 CODE >124:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+40 text2 CODE >126:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+41 text2 CODE >127:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+46 text2 CODE >128:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+13 text1 CODE >132:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+13 text1 CODE >133:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+16 text1 CODE >135:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+18 text1 CODE >137:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+1C text1 CODE >138:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+1D text1 CODE >140:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+1F text1 CODE >141:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+20 text1 CODE >143:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+24 text1 CODE >144:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+27 text1 CODE >146:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
 E6 maintext CODE >53:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-EB maintext CODE >54:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-F0 maintext CODE >55:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-F5 maintext CODE >56:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-FA maintext CODE >59:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-FD maintext CODE >60:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-101 maintext CODE >61:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-102 maintext CODE >63:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-109 maintext CODE >63:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-10C maintext CODE >63:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-111 maintext CODE >63:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-114 maintext CODE >63:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-11B maintext CODE >63:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-123 maintext CODE >65:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-172 maintext CODE >66:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-178 maintext CODE >68:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-17C maintext CODE >68:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-17F maintext CODE >68:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-188 maintext CODE >70:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-190 maintext CODE >71:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
-192 maintext CODE >73:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+E6 maintext CODE >54:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+EB maintext CODE >55:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+F0 maintext CODE >56:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+F5 maintext CODE >57:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+FA maintext CODE >61:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+FD maintext CODE >62:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+101 maintext CODE >63:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+102 maintext CODE >66:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+109 maintext CODE >66:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+10C maintext CODE >66:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+111 maintext CODE >66:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+114 maintext CODE >66:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+11B maintext CODE >66:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+123 maintext CODE >69:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+172 maintext CODE >72:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+178 maintext CODE >75:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+17C maintext CODE >75:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+17F maintext CODE >75:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+188 maintext CODE >78:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+190 maintext CODE >80:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+192 maintext CODE >82:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -631,23 +631,23 @@ __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _ADIF 66 0 ABS 0 - dist/default/production\Lab05.production.o
-___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
+___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
 _main 1CC 0 CODE 0 maintext dist/default/production\Lab05.production.o
 _vPWM 61 0 BANK0 1 bssBANK0 dist/default/production\Lab05.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab05.production.o
-start 0 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
+start 0 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
 ___flmul@aexp 32 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@bexp 33 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@prod 34 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@sign 2D 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@temp 38 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
 _setupINTOSC 1FF0 0 CODE 0 text3 dist/default/production\Lab05.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab05.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Lab05.production.o
@@ -668,8 +668,8 @@ __end_of___fladd 95A 0 CODE 0 text9 dist/default/production\Lab05.production.o
 __end_of___flmul FE4 0 CODE 0 text7 dist/default/production\Lab05.production.o
 __end_of___fltol 1CC 0 CODE 0 text6 dist/default/production\Lab05.production.o
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\Lab05.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
-___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
+___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
+___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
 ___fladd@a 3E 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___fladd@b 3A 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@a 24 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
@@ -680,7 +680,7 @@ _TRISCbits 87 0 ABS 0 - dist/default/production\Lab05.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 _TMR2IF 61 0 ABS 0 - dist/default/production\Lab05.production.o
 _TMR2ON 92 0 ABS 0 - dist/default/production\Lab05.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
+___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -728,7 +728,7 @@ __S3 0 0 ABS 0 - -
 __end_of_setupINTOSC 2000 0 CODE 0 text3 dist/default/production\Lab05.production.o
 ___xxtofl 33A 0 CODE 0 text5 dist/default/production\Lab05.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAs1a4.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAs2fg.o
 __end_of___xxtofl 4AA 0 CODE 0 text5 dist/default/production\Lab05.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___fladd@signs 4A 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o

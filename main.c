@@ -44,6 +44,7 @@ void setupINTOSC();
 void setup_ADC(void);
 void setup_PWM(void);
 
+// Variables para la configuración del PWM
 unsigned int valADC;
 unsigned int vPWM;
 unsigned int vPWMl;
@@ -56,18 +57,26 @@ int main() {
     setup_PWM();
     
     while(1){
+        // Iniciar la conversión ADC
         ADCON0bits.GO = 1;
         while (ADCON0bits.GO == 1); // Revisa si ya terminó la conversión ADC
         ADIF = 0;               // Apaga la bandera del ADC
         
+        // Carga el resultado a valADC en una variable de 1024 bits
         valADC = ((ADRESH << 2) + (ADRESL >> 6));
         
+        // Mapea el resultado a los valores calculados para 1 y 2ms
         vPWM = (0.03128*valADC + 31);
+        
+        // Obtiene los 2 bits bajos de la variable vPWM
         vPWMl = vPWM & 0x003;
- 
+        
+        // Obtiene los 8 bits más altos de vPWM 
         vPWMh = (vPWM & 0x3FC) >> 2;
         
+        // Carga los bits bajos a CCP1CON <5:4>
         CCP1CONbits.DC1B = vPWMl;
+        // Carga los bits altos a CCPR1L
         CCPR1L = vPWMh;
 
         __delay_ms(1);
@@ -86,7 +95,9 @@ void setup(void){
     PORTB = 1;
     PORTD = 0;
 }
-
+//******************************************************************************
+// Configuración de oscilador interno
+//******************************************************************************
 void setupINTOSC(void){
     OSCCONbits.IRCF = 0b011;
     OSCCONbits.SCS = 1;
@@ -115,6 +126,9 @@ void setup_ADC(void){
     ADCON0bits.ADON = 1;    // Habilitar el convertidor ADC
     __delay_us(100);
 }
+//******************************************************************************
+// Configuración del PWM
+//******************************************************************************
 void setup_PWM(void){
     TRISCbits.TRISC2 = 1;
     
@@ -122,6 +136,7 @@ void setup_PWM(void){
     
     CCP1CON = 0b00001100;
     TMR2IF = 0;
+    
     T2CONbits.T2CKPS = 0b11;
     TMR2ON = 1;
     

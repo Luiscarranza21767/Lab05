@@ -2663,6 +2663,7 @@ void setupINTOSC();
 void setup_ADC(void);
 void setup_PWM(void);
 
+
 unsigned int valADC;
 unsigned int vPWM;
 unsigned int vPWMl;
@@ -2675,18 +2676,26 @@ int main() {
     setup_PWM();
 
     while(1){
+
         ADCON0bits.GO = 1;
         while (ADCON0bits.GO == 1);
         ADIF = 0;
 
+
         valADC = ((ADRESH << 2) + (ADRESL >> 6));
 
+
         vPWM = (0.03128*valADC + 31);
+
+
         vPWMl = vPWM & 0x003;
+
 
         vPWMh = (vPWM & 0x3FC) >> 2;
 
+
         CCP1CONbits.DC1B = vPWMl;
+
         CCPR1L = vPWMh;
 
         _delay((unsigned long)((1)*(500000/4000.0)));
@@ -2705,6 +2714,8 @@ void setup(void){
     PORTB = 1;
     PORTD = 0;
 }
+
+
 
 void setupINTOSC(void){
     OSCCONbits.IRCF = 0b011;
@@ -2734,6 +2745,9 @@ void setup_ADC(void){
     ADCON0bits.ADON = 1;
     _delay((unsigned long)((100)*(500000/4000000.0)));
 }
+
+
+
 void setup_PWM(void){
     TRISCbits.TRISC2 = 1;
 
@@ -2741,6 +2755,7 @@ void setup_PWM(void){
 
     CCP1CON = 0b00001100;
     TMR2IF = 0;
+
     T2CONbits.T2CKPS = 0b11;
     TMR2ON = 1;
 

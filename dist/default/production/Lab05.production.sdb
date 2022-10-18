@@ -17,15 +17,15 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"52 D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+"53 D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
 [v _main main `(i  1 e 2 0 ]
-"80
+"89
 [v _setup setup `(v  1 e 1 0 ]
-"90
+"101
 [v _setupINTOSC setupINTOSC `(v  1 e 1 0 ]
-"97
+"108
 [v _setup_ADC setup_ADC `(v  1 e 1 0 ]
-"118
+"132
 [v _setup_PWM setup_PWM `(v  1 e 1 0 ]
 [s S166 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
@@ -186,38 +186,38 @@
 [v _TMR2IF TMR2IF `VEb  1 e 0 @97 ]
 "4390
 [v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
-"47 D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
+"48 D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
 [v _valADC valADC `ui  1 e 2 0 ]
-"48
-[v _vPWM vPWM `ui  1 e 2 0 ]
 "49
-[v _vPWMl vPWMl `ui  1 e 2 0 ]
+[v _vPWM vPWM `ui  1 e 2 0 ]
 "50
+[v _vPWMl vPWMl `ui  1 e 2 0 ]
+"51
 [v _vPWMh vPWMh `ui  1 e 2 0 ]
-"52
+"53
 [v _main main `(i  1 e 2 0 ]
 {
-"75
+"84
 } 0
-"118
+"132
 [v _setup_PWM setup_PWM `(v  1 e 1 0 ]
 {
-"131
+"146
 } 0
-"97
+"108
 [v _setup_ADC setup_ADC `(v  1 e 1 0 ]
 {
-"117
+"128
 } 0
-"90
+"101
 [v _setupINTOSC setupINTOSC `(v  1 e 1 0 ]
 {
-"93
+"104
 } 0
-"80
+"89
 [v _setup setup `(v  1 e 1 0 ]
 {
-"88
+"97
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
