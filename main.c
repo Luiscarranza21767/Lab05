@@ -5,7 +5,7 @@
  Proyecto: Laboratorio 5
  Hardware PIC16F887
  Creado: 17/10/22
- Última Modificación: 17/10/22*/
+ Última Modificación: 24/10/22*/
 
 // CONFIG1
 #pragma config FOSC = INTRC_NOCLKOUT // Oscillator Selection bits (INTOSC 

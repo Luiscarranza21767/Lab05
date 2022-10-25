@@ -35,7 +35,7 @@ bssBANK0 BANK0 1 68 68 8 1 1
 bssBANK1 BANK1 1 A0 A0 2 1 1
 bssCOMMON COMMON 1 7A 7A 2 1 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
+$C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -87,27 +87,27 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab05.production.o
-F cinit CODE >507:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-F cinit CODE >510:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-F cinit CODE >542:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-10 cinit CODE >543:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-11 cinit CODE >546:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-12 cinit CODE >547:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-13 cinit CODE >548:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-14 cinit CODE >549:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-15 cinit CODE >550:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-16 cinit CODE >551:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-17 cinit CODE >552:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-18 cinit CODE >553:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-19 cinit CODE >554:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-1A cinit CODE >555:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-1B cinit CODE >558:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-1C cinit CODE >559:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-1D cinit CODE >560:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-1E cinit CODE >561:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-1F cinit CODE >567:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-1F cinit CODE >569:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
-20 cinit CODE >570:C:\Users\Pablo\AppData\Local\Temp\xcAsaho.s
+F cinit CODE >507:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+F cinit CODE >510:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+F cinit CODE >542:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+10 cinit CODE >543:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+11 cinit CODE >546:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+12 cinit CODE >547:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+13 cinit CODE >548:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+14 cinit CODE >549:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+15 cinit CODE >550:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+16 cinit CODE >551:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+17 cinit CODE >552:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+18 cinit CODE >553:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+19 cinit CODE >554:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+1A cinit CODE >555:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+1B cinit CODE >558:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+1C cinit CODE >559:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+1D cinit CODE >560:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+1E cinit CODE >561:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+1F cinit CODE >567:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+1F cinit CODE >569:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
+20 cinit CODE >570:C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.s
 4 intentry CODE >58:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
 7D2 text13 CODE >58:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
 7D2 text13 CODE >59:D:\Backup\Documentos\GitHub\Lab05\Lab05\main.c
@@ -708,12 +708,12 @@ __Hstrings 0 0 ABS 0 strings -
 _ADIF 66 0 ABS 0 - dist/default/production\Lab05.production.o
 _PWM3 A0 0 BANK1 1 bssBANK1 dist/default/production\Lab05.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Lab05.production.o
-___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
+___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
 _cont 68 0 BANK0 1 bssBANK0 dist/default/production\Lab05.production.o
 _main CF4 0 CODE 0 maintext dist/default/production\Lab05.production.o
 _vPWM 6C 0 BANK0 1 bssBANK0 dist/default/production\Lab05.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab05.production.o
-start 18 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
+start 18 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
 ___flmul@aexp 34 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@bexp 39 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@prod 3A 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
@@ -722,12 +722,12 @@ ___flmul@temp 3E 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Lab05.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _setupINTOSC 1E1C 0 CODE 0 text5 dist/default/production\Lab05.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab05.production.o
@@ -750,8 +750,8 @@ __end_of___fladd B80 0 CODE 0 text12 dist/default/production\Lab05.production.o
 __end_of___flmul 6D0 0 CODE 0 text10 dist/default/production\Lab05.production.o
 __end_of___fltol 2000 0 CODE 0 text9 dist/default/production\Lab05.production.o
 __Umul8_16@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\Lab05.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
-___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
+___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
+___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
 ___fladd@a 44 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___fladd@b 40 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 ___flmul@a 2A 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
@@ -762,7 +762,7 @@ _TRISCbits 87 0 ABS 0 - dist/default/production\Lab05.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.production.o
 _TMR2IF 61 0 ABS 0 - dist/default/production\Lab05.production.o
 _TMR2ON 92 0 ABS 0 - dist/default/production\Lab05.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
+___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -817,7 +817,7 @@ __end_of_setupINTOSC 1E2C 0 CODE 0 text5 dist/default/production\Lab05.productio
 ___xxtofl B80 0 CODE 0 text8 dist/default/production\Lab05.production.o
 __end_of_isr FFE 0 CODE 0 text13 dist/default/production\Lab05.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAsaho.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAs7jo.o
 __end_of___xxtofl CF4 0 CODE 0 text8 dist/default/production\Lab05.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
