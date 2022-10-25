@@ -2661,42 +2661,75 @@ extern __bank0 __bit __timeout;
 void setup(void);
 void setupINTOSC();
 void setup_ADC(void);
-void setup_PWM(void);
+void setup_PWM1(void);
+void setup_PWM2(void);
+void setupTMR0(void);
+void mapeo(void);
 
 
 unsigned int valADC;
 unsigned int vPWM;
 unsigned int vPWMl;
 unsigned int vPWMh;
+unsigned int cont;
+unsigned int PWM3;
+
+void __attribute__((picinterrupt(("")))) isr (void){
+    if (INTCONbits.T0IF){
+        cont++;
+
+        if (cont <= PWM3){
+            PORTCbits.RC3 = 1;
+        }
+        else {
+            PORTCbits.RC3 = 0;
+        }
+        TMR0 = 254;
+        INTCONbits.T0IF = 0;
+    }
+}
 
 int main() {
     setup();
     setupINTOSC();
     setup_ADC();
-    setup_PWM();
+    setup_PWM1();
+    setup_PWM2();
+    setupTMR0();
 
     while(1){
+        cont = 0;
 
+        ADCON0bits.CHS = 0b0000;
         ADCON0bits.GO = 1;
         while (ADCON0bits.GO == 1);
         ADIF = 0;
 
-
-        valADC = ((ADRESH << 2) + (ADRESL >> 6));
-
-
-        vPWM = (0.03128*valADC + 31);
-
-
-        vPWMl = vPWM & 0x003;
-
-
-        vPWMh = (vPWM & 0x3FC) >> 2;
+        mapeo();
 
 
         CCP1CONbits.DC1B = vPWMl;
 
         CCPR1L = vPWMh;
+
+        ADCON0bits.CHS = 0b0001;
+        ADCON0bits.GO = 1;
+        while (ADCON0bits.GO == 1);
+        ADIF = 0;
+
+        mapeo();
+
+        CCP2CONbits.DC2B0 = vPWMl & 0x01;
+        CCP2CONbits.DC2B1 = ((vPWMl & 0x02) >> 1);
+
+        CCPR2L = vPWMh;
+
+        ADCON0bits.CHS = 0b0010;
+        ADCON0bits.GO = 1;
+        while (ADCON0bits.GO == 1);
+        ADIF = 0;
+
+        PWM3 = ((ADRESH << 2) + (ADRESL >> 6));
 
         _delay((unsigned long)((1)*(500000/4000.0)));
     }
@@ -2729,6 +2762,15 @@ void setup_ADC(void){
     TRISAbits.TRISA0 = 1;
     ANSELbits.ANS0 = 1;
 
+    PORTAbits.RA1 = 0;
+    TRISAbits.TRISA1 = 1;
+    ANSELbits.ANS1 = 1;
+
+    PORTAbits.RA2 = 0;
+    TRISAbits.TRISA2 = 1;
+    ANSELbits.ANS2 = 1;
+
+
     ADCON0bits.ADCS1 = 0;
     ADCON0bits.ADCS0 = 1;
 
@@ -2737,29 +2779,56 @@ void setup_ADC(void){
 
     ADCON1bits.ADFM = 0;
 
-    ADCON0bits.CHS3 = 0;
-    ADCON0bits.CHS2 = 0;
-    ADCON0bits.CHS1 = 0;
-    ADCON0bits.CHS0 = 0;
-
     ADCON0bits.ADON = 1;
     _delay((unsigned long)((100)*(500000/4000000.0)));
 }
 
 
 
-void setup_PWM(void){
+void setup_PWM1(void){
     TRISCbits.TRISC2 = 1;
-
     PR2 = 155;
-
     CCP1CON = 0b00001100;
     TMR2IF = 0;
-
     T2CONbits.T2CKPS = 0b11;
     TMR2ON = 1;
-
     while(!TMR2IF);
     TRISCbits.TRISC2 = 0;
+}
 
+void setup_PWM2(void){
+    TRISCbits.TRISC1 = 1;
+    PR2 = 155;
+    CCP2CON = 0b00001100;
+    TMR2IF = 0;
+    T2CONbits.T2CKPS = 0b11;
+    TMR2ON = 1;
+    while(!TMR2IF);
+    TRISCbits.TRISC1 = 0;
+
+}
+
+void mapeo(void){
+
+    valADC = ((ADRESH << 2) + (ADRESL >> 6));
+
+
+    vPWM = (0.0635*valADC + 31);
+
+
+    vPWMl = vPWM & 0x003;
+
+
+    vPWMh = (vPWM & 0x3FC) >> 2;
+}
+
+void setupTMR0(void){
+    INTCONbits.GIE = 1;
+    INTCONbits.T0IE = 1;
+    INTCONbits.T0IF = 0;
+
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS = 0b011;
+    TMR0 = 250;
 }
